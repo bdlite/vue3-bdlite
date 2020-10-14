@@ -8,7 +8,7 @@
 ## Features
 
 - 使用utils提供的conbineReactUse将state和use函数分离，并返回一些带有只读性质和保有响应式的属性
-- 后续还会有路由->文件夹的设计改造
+- 后续还会有路由->文件结构的设计改造
 - 后续还会有一些工程化的配套设施
 
 ## Development
