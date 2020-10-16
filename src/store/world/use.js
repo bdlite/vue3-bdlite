@@ -8,6 +8,6 @@ export default (state) => ({
     state.count++
   },
   decrement() {
-    state.count--;
+    state.count--
   },
 })
