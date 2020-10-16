@@ -17,7 +17,6 @@ import helloInitialState from '/@/store/world/state'
 
 const { state, use, getRefState } = store;
 
-const helloState = reactive(helloInitialState);
 helloInitialState.count = 10;
 
 
@@ -25,6 +24,8 @@ export default {
   name: 'ReuseWorld',
   setup() {
     const stateRef = getRefState();
+    const helloState = reactive(helloInitialState);
+
     stateRef.count.value = 6;
 
     const click = () => {
@@ -40,7 +41,6 @@ export default {
       state,
       ...stateRef,
       use,
-      ...use,
       helloState,
       click,
       increment,
