@@ -23,14 +23,14 @@ import helloInitialState from '/@/store/world/state'
 
 const { state, use, getRefState } = store;
 
-const helloState = reactive(helloInitialState);
-helloInitialState.count = 20;
-
 
 export default {
   name: 'AfterReuseWorld',
   setup() {
     const stateRef = getRefState();
+    const helloState = reactive(helloInitialState);
+
+    helloInitialState.count = 20;
     stateRef.count.value = 9;
 
     const click = () => {
