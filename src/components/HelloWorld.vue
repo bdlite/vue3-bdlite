@@ -3,7 +3,7 @@
   <button @click="increment">state.count is: {{ state.count }}</button>
   <br />
   <br />
-  <button @click="use.increment">use.increment, count is: {{ count }}</button>
+  <button @click="increment">count is: {{ count }}</button>
   <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p >
 </template>
 
@@ -20,12 +20,12 @@ export default {
   },
   setup() {
     const stateRef = getRefState();
+    const { increment } = use.changeCount();
 
     return {
       state,
       ...stateRef,
-      use,
-      ...use,
+      increment,
     }
   }
 }
