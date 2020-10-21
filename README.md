@@ -8,7 +8,7 @@
 ## Features
 
 - 使用utils提供的conbineReactUse将state和use函数分离，并返回一些带有只读性质和保有响应式的属性
-- 后续还会有路由->文件结构的设计改造
+- 初步utils提供了configRouter把路由配置分散到各自一级甚至嵌套层级中，目录结构基本与views保持一致
 - 后续还会有一些工程化的配套设施
 
 ## Development
