@@ -1,5 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <br />
+  <router-view />
   <HelloWorld msg="Hello Vue 3.0 + Vite" />
   <ReuseWorld />
   <AfterReuseWorld />
