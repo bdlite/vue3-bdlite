@@ -4,7 +4,7 @@
   <br />
   <br />
   <button @click="increment">count is: {{ count }}</button>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p >
+  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
   props: {
     msg: String
   },
-  setup() {
+  setup () {
     const stateRef = getRefState();
     const { increment } = use.changeCount();
 

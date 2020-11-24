@@ -18,7 +18,7 @@
 <script>
 import { reactive } from 'vue'
 
-import store from '/@/store/world/reuse.js'
+import store from '/@/store/world/reuse.ts'
 import helloInitialState from '/@/store/world/state'
 
 const { state, use, getRefState } = store;
@@ -26,7 +26,7 @@ const { state, use, getRefState } = store;
 
 export default {
   name: 'AfterReuseWorld',
-  setup() {
+  setup () {
     const stateRef = getRefState();
     const helloState = reactive(helloInitialState);
 
@@ -36,7 +36,7 @@ export default {
     const click = () => {
       use.increment(); // update
       helloInitialState.count = 200;
-      console.log('AfterReuseWorld click: helloInitialState',helloInitialState);
+      console.log('AfterReuseWorld click: helloInitialState', helloInitialState);
     }
 
     const increment = () => {
@@ -45,7 +45,7 @@ export default {
 
     const decrement = () => {
       helloInitialState.count--; // no update
-      console.log('AfterReuseWorld decrement: helloInitialState',helloInitialState);
+      console.log('AfterReuseWorld decrement: helloInitialState', helloInitialState);
     }
 
     return {

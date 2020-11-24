@@ -12,7 +12,7 @@
 <script>
 import { reactive } from 'vue'
 
-import store from '/@/store/world/reuse.js'
+import store from '/@/store/world/reuse'
 import helloInitialState from '/@/store/world/state'
 
 const { state, use, getRefState } = store;
@@ -22,7 +22,7 @@ helloInitialState.count = 10;
 
 export default {
   name: 'ReuseWorld',
-  setup() {
+  setup () {
     const stateRef = getRefState();
     const helloState = reactive(helloInitialState);
 
