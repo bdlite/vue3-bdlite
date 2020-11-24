@@ -1,4 +1,7 @@
-export default (state) => ({
+interface IState<T> {
+  [key: string]: T
+}
+export default (state: IState<any>) => ({
   changeCount() {
     const increment = () => state.count++;
     const decrement = () => state.count--;
